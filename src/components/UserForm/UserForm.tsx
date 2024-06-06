@@ -1,4 +1,10 @@
-const UserForm = () => {
+import React from 'react';
+import {User} from '../../types';
+
+interface UserFormProps {
+  onSubmit:(user: User) => void;
+}
+const UserForm:React.FC<UserFormProps> = () => {
   return (
     <form>
       <h4>Add new user</h4>
