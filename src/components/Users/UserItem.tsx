@@ -7,13 +7,15 @@ interface UserItemProps {
 
 const UserItem:React.FC<UserItemProps> = ({user}) => {
   return (
-    <div className="card mb-2 p-3">
-      <div className="row no-gutters">
+    <div className="card mb-3 shadow-sm">
+      <div className="card-header bg-dark.bg-gradient">
+        <h5 className="card-title mb-0">{user.name}</h5>
+      </div>
+      <div className="row no-gutters p-2">
         <div>
-          <h5 className="card-style">{user.name}</h5>
-          <p className="card-text small">Email: {user.email}</p>
-          <p className="card-text">Activity: {user.activity ? 'Active' : 'Not active'}</p>
-          <p className="card-text">Role: {user.role}</p>
+          <p className="card-text small"><strong>Email:</strong> {user.email}</p>
+          <p className="card-text"><strong>Activity:</strong> {user.activity ? 'Active' : 'Not active'}</p>
+          <p className="card-text"><strong>Role:</strong> {user.role}</p>
         </div>
       </div>
     </div>
